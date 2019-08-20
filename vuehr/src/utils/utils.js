@@ -18,8 +18,9 @@ export const initMenu = (router, store)=> {
   getRequest("/config/sysmenu").then(resp=> {
     if (resp && resp.status == 200) {
       var fmtRoutes = formatRoutes(resp.data);
-      router.addRoutes(fmtRoutes);
-      store.commit('initMenu', fmtRoutes);
+      // console.log(fmtRoutes,'fmtRoutes')
+      // router.addRoutes(fmtRoutes);
+      // store.commit('initMenu', fmtRoutes);
       store.dispatch('connect');
     }
   })

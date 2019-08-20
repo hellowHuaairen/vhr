@@ -57,6 +57,7 @@
   </div>
 </template>
 <script>
+import { initRoutes} from '../router'
   export default{
     mounted: function () {
 //      this.devMsg();
@@ -113,16 +114,17 @@
     },
     data(){
       return {
-        isDot: false
+        isDot: false,
+        routes: initRoutes
       }
     },
     computed: {
       user(){
         return this.$store.state.user;
-      },
-      routes(){
-        return this.$store.state.routes
       }
+      // routes(){
+      //   return this.$store.state.routes
+      // }
     }
   }
 </script>
